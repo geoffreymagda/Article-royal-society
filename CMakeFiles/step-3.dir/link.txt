@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic -rdynamic -fuse-ld=gold -ggdb -Wl,--compress-debug-sections=zlib CMakeFiles/step-3.dir/source/step-3.cc.o -o step-3  -Wl,-rpath,/home/bob/Documents/deal.II/lib /home/bob/Documents/deal.II/lib/libdeal_II.g.so.9.5.2 -ldl -lrt 

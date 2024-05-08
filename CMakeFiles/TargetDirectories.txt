@@ -1,0 +1,10 @@
+/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/step-3.dir
+/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/run.dir
+/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/debug.dir
+/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/release.dir
+/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/runclean.dir
+/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/distclean.dir
+/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/strip_comments.dir
+/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/info.dir
+/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/edit_cache.dir
+/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/rebuild_cache.dir

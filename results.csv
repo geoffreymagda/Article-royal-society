@@ -1,0 +1,2 @@
+current density,magnetic field,fx,fy,fxv2,fyv2,fx_safe,fy_safe,fxv2_safe,fyv2_safe,flaplacex,flaplacey,refinment,is_saturated,elapse_time_total,shapefunction_degree,size multiplicator ,number dof, fx_r,fy_r,fx_safe_r,fy_safe_r,flaplacex_r,flaplacey_r,is alternative current,size,size2,integral_force,integral_force2,is_periodic
+failed test with config shape_function=2 refinement level = 5size multiplicator = 0distance multiplicator30is alternative current1

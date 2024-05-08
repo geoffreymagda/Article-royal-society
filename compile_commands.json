@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/bob/Documents/GitHub/Article/non linear wire b  para",
+  "command": "/usr/bin/c++ -DDEBUG -isystem /home/bob/Documents/deal.II/include -isystem /home/bob/Documents/deal.II/include/deal.II/bundled -pedantic -Wall -Wextra -Wmissing-braces -Woverloaded-virtual -Wpointer-arith -Wsign-compare -Wsuggest-override -Wswitch -Wsynth -Wwrite-strings -Wno-placement-new -Wno-deprecated-declarations -Wno-literal-suffix -Wno-psabi -Wno-class-memaccess -Wno-parentheses -Wno-unused-local-typedefs -fopenmp-simd -O0 -ggdb -Wa,--compress-debug-sections -o CMakeFiles/step-3.dir/source/step-3.cc.o -c \"/home/bob/Documents/GitHub/Article/non linear wire b  para/source/step-3.cc\"",
+  "file": "/home/bob/Documents/GitHub/Article/non linear wire b  para/source/step-3.cc"
+}
+]
