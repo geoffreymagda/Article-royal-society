@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/bob/Documents/GitHub/Article/non linear wire b  para"
+CMAKE_SOURCE_DIR = /home/bob/Documents/GitHub/Article
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/bob/Documents/GitHub/Article/non linear wire b  para"
+CMAKE_BINARY_DIR = /home/bob/Documents/GitHub/Article
 
 # Utility rule file for info.
 
@@ -67,7 +67,7 @@ include CMakeFiles/info.dir/compiler_depend.make
 include CMakeFiles/info.dir/progress.make
 
 CMakeFiles/info:
-	/usr/bin/cmake -P /home/bob/Documents/GitHub/Article/non\ linear\ wire\ b\ \ para/CMakeFiles/print_usage.cmake
+	/usr/bin/cmake -P /home/bob/Documents/GitHub/Article/CMakeFiles/print_usage.cmake
 
 info: CMakeFiles/info
 info: CMakeFiles/info.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/info.dir/clean:
 .PHONY : CMakeFiles/info.dir/clean
 
 CMakeFiles/info.dir/depend:
-	cd "/home/bob/Documents/GitHub/Article/non linear wire b  para" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/info.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/bob/Documents/GitHub/Article && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article/CMakeFiles/info.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/info.dir/depend
 

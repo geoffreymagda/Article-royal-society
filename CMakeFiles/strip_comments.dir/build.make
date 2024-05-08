@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/bob/Documents/GitHub/Article/non linear wire b  para"
+CMAKE_SOURCE_DIR = /home/bob/Documents/GitHub/Article
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/bob/Documents/GitHub/Article/non linear wire b  para"
+CMAKE_BINARY_DIR = /home/bob/Documents/GitHub/Article
 
 # Utility rule file for strip_comments.
 
@@ -67,8 +67,8 @@ include CMakeFiles/strip_comments.dir/compiler_depend.make
 include CMakeFiles/strip_comments.dir/progress.make
 
 CMakeFiles/strip_comments:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "strip comments"
-	/usr/bin/perl -pi -e 's#^[ \t]*//.*\n##g;' /home/bob/Documents/GitHub/Article/non\ linear\ wire\ b\ \ para/source/step-3.cc /home/bob/Documents/GitHub/Article/non\ linear\ wire\ b\ \ para/source/output.h /home/bob/Documents/GitHub/Article/non\ linear\ wire\ b\ \ para/source/problem_conditions.h /home/bob/Documents/GitHub/Article/non\ linear\ wire\ b\ \ para/source/tools.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/bob/Documents/GitHub/Article/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "strip comments"
+	/usr/bin/perl -pi -e 's#^[ \t]*//.*\n##g;' /home/bob/Documents/GitHub/Article/source/step-3.cc /home/bob/Documents/GitHub/Article/source/output.h /home/bob/Documents/GitHub/Article/source/problem_conditions.h /home/bob/Documents/GitHub/Article/source/tools.h
 
 strip_comments: CMakeFiles/strip_comments
 strip_comments: CMakeFiles/strip_comments.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/strip_comments.dir/clean:
 .PHONY : CMakeFiles/strip_comments.dir/clean
 
 CMakeFiles/strip_comments.dir/depend:
-	cd "/home/bob/Documents/GitHub/Article/non linear wire b  para" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/strip_comments.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/bob/Documents/GitHub/Article && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article/CMakeFiles/strip_comments.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/strip_comments.dir/depend
 

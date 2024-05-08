@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/bob/Documents/GitHub/Article/non linear wire b  para"
+CMAKE_SOURCE_DIR = /home/bob/Documents/GitHub/Article
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/bob/Documents/GitHub/Article/non linear wire b  para"
+CMAKE_BINARY_DIR = /home/bob/Documents/GitHub/Article
 
 # Utility rule file for distclean.
 
@@ -67,9 +67,9 @@ include CMakeFiles/distclean.dir/compiler_depend.make
 include CMakeFiles/distclean.dir/progress.make
 
 CMakeFiles/distclean:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "distclean invoked"
-	/usr/bin/cmake --build /home/bob/Documents/GitHub/Article/non\ linear\ wire\ b\ \ para --target clean
-	/usr/bin/cmake --build /home/bob/Documents/GitHub/Article/non\ linear\ wire\ b\ \ para --target runclean
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/bob/Documents/GitHub/Article/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "distclean invoked"
+	/usr/bin/cmake --build /home/bob/Documents/GitHub/Article --target clean
+	/usr/bin/cmake --build /home/bob/Documents/GitHub/Article --target runclean
 	/usr/bin/cmake -E remove_directory CMakeFiles
 	/usr/bin/cmake -E remove CMakeCache.txt cmake_install.cmake Makefile build.ninja rules.ninja .ninja_deps .ninja_log
 
@@ -86,6 +86,6 @@ CMakeFiles/distclean.dir/clean:
 .PHONY : CMakeFiles/distclean.dir/clean
 
 CMakeFiles/distclean.dir/depend:
-	cd "/home/bob/Documents/GitHub/Article/non linear wire b  para" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/distclean.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/bob/Documents/GitHub/Article && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article/CMakeFiles/distclean.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/distclean.dir/depend
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/bob/Documents/GitHub/Article/non linear wire b  para
+# Install script for directory: /home/bob/Documents/GitHub/Article
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/bob/Documents/GitHub/Article/non linear wire b  para/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bob/Documents/GitHub/Article/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

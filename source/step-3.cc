@@ -691,9 +691,8 @@ void Step3::make_grid_near_square()
   triangulation.refine_global(refinement_level+1);
   total_refinment+=1;
   
-  double base_size=5.;
+  //double base_size=5.;
   double scaling_factor=1.5;
-
   //central_refinment(base_size,scaling_factor,number_refining_command);
 
   triangulation.reset_all_manifolds();
@@ -1183,19 +1182,13 @@ double Step3::get_integral_force(double time)
         magnetic_field.clear();
         magnetic_field[0] = initial_grad_A_total[q_index][1];
         magnetic_field[1] = b0 - initial_grad_A_total[q_index][0];
-        double J1 = magnetic_field * magnetic_field;
 
         // build local magnetisation
         magnetisation_vector.clear();
         magnetisation_vector = magnetisation(x_coord, y_coord, magnetic_field,geometry,size,size2,exterior_size);
 
-        double chi_local =
-        local_magnetic_suceptibility(x_coord, y_coord, magnetic_field,geometry,size,size2,exterior_size);
-
         Sigma_m_by_chi.clear();
-        //Sigma_m_by_m=
         Sigma_m_by_chi=1./mu0*(outer_product(magnetic_field,magnetic_field)-1./2.*contract<0,0>(magnetic_field,magnetic_field)*Id_tensor);
-          //-chi_local/mu0/(1.+chi_local)*(outer_product(magnetic_field,magnetic_field)-1.*Id_tensor);
         normal_tensor_3D.clear();
         normal_tensor_3D[0]=fe_face_values.normal_vector(q_index)[0];
         normal_tensor_3D[1]=fe_face_values.normal_vector(q_index)[1];
@@ -1285,8 +1278,6 @@ double Step3::get_integral_force_bis(double time)
         //std::cout<<"x"<<face->center()[0]<<"y"<<face->center()[1]<<std::endl;
         //START COMPUTE
 
-
-
         double x_coord = fe_face_values.quadrature_point(q_index)[0];
         double y_coord = fe_face_values.quadrature_point(q_index)[1];
 
@@ -1294,19 +1285,13 @@ double Step3::get_integral_force_bis(double time)
         magnetic_field.clear();
         magnetic_field[0] = initial_grad_A_total[q_index][1];
         magnetic_field[1] = b0 - initial_grad_A_total[q_index][0];
-        double J1 = magnetic_field * magnetic_field;
 
         // build local magnetisation
         magnetisation_vector.clear();
         magnetisation_vector = magnetisation(x_coord, y_coord, magnetic_field,geometry,size,size2,exterior_size);
 
-        double chi_local =
-        local_magnetic_suceptibility(x_coord, y_coord, magnetic_field,geometry,size,size2,exterior_size);
-
         Sigma_m_by_chi.clear();
-        //Sigma_m_by_m=
         Sigma_m_by_chi=1./mu0*(outer_product(magnetic_field,magnetic_field)-1./2.*contract<0,0>(magnetic_field,magnetic_field)*Id_tensor);
-          //-chi_local/mu0/(1.+chi_local)*(outer_product(magnetic_field,magnetic_field)-1.*Id_tensor);
         normal_tensor_3D.clear();
         normal_tensor_3D[0]=fe_face_values.normal_vector(q_index)[0];
         normal_tensor_3D[1]=fe_face_values.normal_vector(q_index)[1];
@@ -1348,6 +1333,8 @@ void Step3::solve_44()
   A_direct.initialize(system_matrix);
   A_direct.vmult(solution, system_rhs);
   constraints.distribute(solution);
+
+  std::cout << "solved" << std::endl;
 }
 
 void Step3::output_results(unsigned int cycle) const
@@ -1458,7 +1445,7 @@ double Step3::run(unsigned int number_refinment_cycles, bool output_control)
     //std::cout << "Refinement Cycle " << cycle_refinement << ':' << std::endl;
 
     unsigned int number_cycle = 100;
-    double norm_limit = 0.0000000000001;
+    double norm_limit = 0.00000000001;
     double norm = 100;
     unsigned int cycle = 0;
     initiate_solution = true;
@@ -1488,7 +1475,7 @@ double Step3::run(unsigned int number_refinment_cycles, bool output_control)
       //std::cout << "elapse time assemble" << elapse_time.count() << " s\n";
 
       //start = std::chrono::system_clock::now();
-      solve_44();
+      solve();
 
       end = std::chrono::system_clock::now();
       elapse_time = end - start;
@@ -1496,7 +1483,6 @@ double Step3::run(unsigned int number_refinment_cycles, bool output_control)
       initial_solution.add(-1. * convergence_param, solution);
       norm = system_rhs.norm_sqr();
       
-      //std::cout << "norm = " << norm << " \n";
       std::cout <<"Cycle " << cycle << ':' << "elapse time " << elapse_time.count() << "s, norm = " << norm <<  " \n";
 
       cycle += 1;
@@ -1655,24 +1641,30 @@ int main()
   //Fig total
   
   unsigned int shape_degree = 2;
-  double b_max=0.8*2.;
-  double j_max=4./2502./mu0/radius*b_max*2.;
-  unsigned int b_step=16;
-  unsigned int j_step=16;
+  //double b_max=0.8*2.;
+  //double j_max=4./2502./mu0/radius*b_max*2.;
+  //unsigned int b_step=16;
+  //unsigned int j_step=16;
   std::vector<double> step_list= {0.,1.,2.,4.,8.,16.};
   //std::vector<double> step_list= {0.,1.,2.,4.,16};
   unsigned int number_steps=step_list.size();
-  bool print_output=false;
-  unsigned int geom = 2002;//2 circular wire
-  unsigned int number_refinment=5.;
-  double size_mult=0.;
+  //bool print_output=false;
+  //unsigned int geom = 2002;//2 circular wire
+  unsigned int number_refinment=3.;
+  //double size_mult=0.;
   double distance_mult=30.;
 
   bool alter_current=true;
-  bool periodic=false;
+  bool periodic=true;
 
-  task_group_command+= Threads::new_task(&command_data::unique_test,command_main,shape_degree,0.1,4./2502./mu0/radius*0.1,
-                                          true,2001,radius,radius,number_refinment,0,distance_mult,alter_current,periodic);
+  task_group_command+= Threads::new_task(&command_data::unique_test,command_main,shape_degree,1.5,4./2502./mu0/radius*2.5,
+                                          true,2002,radius,radius,number_refinment,0,distance_mult,alter_current,periodic);
+
+  task_group_command+= Threads::new_task(&command_data::unique_test,command_main,shape_degree,1.5,4./2502./mu0/radius*2.5,
+                                          true,2002,radius,radius,number_refinment,1,distance_mult,alter_current,periodic);
+
+  task_group_command+= Threads::new_task(&command_data::unique_test,command_main,shape_degree,1.5,4./2502./mu0/radius*2.5,
+                                          true,2002,radius,radius,number_refinment,16,distance_mult,alter_current,periodic);
 
   /*task_group_command+= Threads::new_task(&command_data::unique_test,command_main,shape_degree,0.0001,4./2502./mu0/radius*0.0001,
                                           print_output,2001,radius,radius,number_refinment,0,distance_mult,alter_current,periodic);

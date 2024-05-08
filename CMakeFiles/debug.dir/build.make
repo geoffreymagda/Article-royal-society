@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/bob/Documents/GitHub/Article/non linear wire b  para"
+CMAKE_SOURCE_DIR = /home/bob/Documents/GitHub/Article
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/bob/Documents/GitHub/Article/non linear wire b  para"
+CMAKE_BINARY_DIR = /home/bob/Documents/GitHub/Article
 
 # Utility rule file for debug.
 
@@ -67,8 +67,8 @@ include CMakeFiles/debug.dir/compiler_depend.make
 include CMakeFiles/debug.dir/progress.make
 
 CMakeFiles/debug:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Switching CMAKE_BUILD_TYPE to Debug"
-	/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug "/home/bob/Documents/GitHub/Article/non linear wire b  para"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/bob/Documents/GitHub/Article/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Switching CMAKE_BUILD_TYPE to Debug"
+	/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug /home/bob/Documents/GitHub/Article
 	/usr/bin/cmake -E echo "***"
 	/usr/bin/cmake -E echo "*** Switched to Debug mode. Now recompile with:  \$$ make"
 	/usr/bin/cmake -E echo "***"
@@ -86,6 +86,6 @@ CMakeFiles/debug.dir/clean:
 .PHONY : CMakeFiles/debug.dir/clean
 
 CMakeFiles/debug.dir/depend:
-	cd "/home/bob/Documents/GitHub/Article/non linear wire b  para" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para" "/home/bob/Documents/GitHub/Article/non linear wire b  para/CMakeFiles/debug.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/bob/Documents/GitHub/Article && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article /home/bob/Documents/GitHub/Article/CMakeFiles/debug.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/debug.dir/depend
 

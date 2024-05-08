@@ -55,7 +55,7 @@ namespace pb_cond
 
   double mu0 = 4. * M_PI / 10000000.;
   double minf = 1.7 * 1e6;
-  double chi = 2500.*0.;
+  double chi = 2500.;
   double chir=chi/(1.+chi);
   bool simplified_magnetism = false;
   double mu_mag = mu0 * (1. + chi);
@@ -236,7 +236,7 @@ namespace pb_cond
       unsigned int reduced_index=geom-2000;
       assert(reduced_index>0);
       unsigned int local_geom=(reduced_index-reduced_index % 100)/100;
-      unsigned int repeat=reduced_index % 100;
+      //unsigned int repeat=reduced_index % 100;
       double Lxlocal;
       if(local_geom==0){
         Lxlocal=2.*size * 2.+exterior_size;

@@ -301,11 +301,6 @@ double exterior_size;
         magnetic_field[1] =
             magnetic_field_loading - input_data.solution_gradients[p][0];
 
-        // build local magnetisation
-        Tensor<1, 3> magnetisation_vector =
-            magnetisation(input_data.evaluation_points[p][0]*corrector,
-                          input_data.evaluation_points[p][1]*corrector, magnetic_field,geom,size,size2,exterior_size);
-
         // build current vector
         Tensor<1, 3> current_vector;
         current_vector[2] =

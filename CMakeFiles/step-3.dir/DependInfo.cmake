@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/bob/Documents/GitHub/Article/non linear wire b  para/source/step-3.cc" "CMakeFiles/step-3.dir/source/step-3.cc.o" "gcc" "CMakeFiles/step-3.dir/source/step-3.cc.o.d"
+  "/home/bob/Documents/GitHub/Article/source/step-3.cc" "CMakeFiles/step-3.dir/source/step-3.cc.o" "gcc" "CMakeFiles/step-3.dir/source/step-3.cc.o.d"
   )
 
 # Targets to which this target links.
